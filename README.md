@@ -24,8 +24,8 @@ Ensure the following tools are set up:
 
 2. **Clone & Setup PlaywrightMCP Project**
    ```bash
-   git clone https://github.com/microsoft/playwright-mcp.git
-   cd playwright-mcp
+   git clone https://github.com/microsoft/playwrightmcp.git
+   cd playwrightmcp
    npm install
    ```
 3. **Launch the Playwright MCP Server**
