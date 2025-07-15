@@ -1,4 +1,4 @@
-# 🎭 PlaywrightMCP
+# 🎭 PlaywrightMCP-Jenkins-Allure-framework
 
 A smart Playwright automation assistant powered by GitHub Copilot — enabling rapid generation of web and API tests using natural language prompts.
 
@@ -56,8 +56,38 @@ Use the following prompts inside your GitHub Copilot chat or inline comments for
    - Optionally validate the data types using a JSON schema (Ajv).
    - Log the product title and price to the console.
 
-## 🔗 References
+## Jenkins Setup with Docker
 
-1. [PlaywrightMCP GitHub Repo](https://github.com/microsoft/playwright-mcp)
-2. [Playwright Documentation](https://playwright.dev/)
-3. [GitHub Copilot Docs](https://docs.github.com/en/copilot)
+1. ```bash
+   cd jenkins-playwright-setup
+   ```
+2. Build & Run Jenkins Container:
+   ```bash
+   docker build -t jenkins-playwright-custom .
+   docker run -d --name jenkins-playwright -p 8080:8080 -p 50000:50000 jenkins-playwright-custom
+   ```
+3. Access Jenkins:
+   Open http://localhost:8080 and install suggested plugins.
+   ```
+   docker exec jenkins-playwright cat /var/jenkins_home/secrets/initialAdminPassword
+   ```
+
+## 🛠 Step-by-Step Guide: Jenkins + Playwright + Allure Integration
+
+1. Create Jenkinsfile to Your Local Project
+2. Launch Jenkins and Install Required Jenkins Plugins
+   Go to Manage Jenkins > Plugins and install: - NodeJS Plugin - Allure Jenkins Plugin - Pipeline Plugin (already available in most Jenkins installations)
+3. Configure Tools in Jenkins, navigate to Manage Jenkins > Tool Configuration
+   - Add a new NodeJS installation named: NodeJS 18 Enable “Install automatically”
+   - Choose a version like 18.x or latest
+   - Allure Commandline, Select "Install automatically" with version 2.34.1
+4. Set Up Your Jenkins Project
+   - Create a new pipeline job in Jenkins
+   - Select Pipeline script from SCM
+   - Choose Git and paste your GitHub repo URL
+   - Make sure the branch is set to main (or whichever you're using)
+5. Trigger Build
+   - Once everything is configured: Click "Build Now"
+   - Jenkins will: Clone the repo, Install dependencies, Run Playwright tests, Generate Allure results and Publish the report
+6. View the Allure Report
+   - After build finishes, go to the job → Allure Report link will appear in the left menu. View detailed reports with test steps, logs, attachments, and trends.
