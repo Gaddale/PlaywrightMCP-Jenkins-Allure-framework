@@ -1,6 +1,6 @@
-# 🎭 PlaywrightMCP-Jenkins-Allure-framework
+# PlaywrightMCP-Jenkins-Allure-framework
 
-A smart Playwright automation assistant powered by GitHub Copilot — enabling rapid generation of web and API tests using natural language prompts.
+This repository showcases an AI-powered Playwright test automation framework, built using GitHub Copilot (MCP) in Visual Studio Code. It follows the Page Object Model (POM) for scalability, integrates Allure Reports for rich and interactive test reporting, and supports Jenkins CI/CD pipelines for seamless automated execution and continuous feedback.
 
 ---
 
