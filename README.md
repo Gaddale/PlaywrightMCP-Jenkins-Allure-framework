@@ -24,14 +24,15 @@ Ensure the following tools are set up:
 
 2. **Clone & Setup PlaywrightMCP Project**
    ```bash
-   git clone https://github.com/microsoft/playwrightmcp.git
-   cd playwrightmcp
+   git clone git@github.com:Gaddale/PlaywrightMCP-Jenkins-Allure-framework.git
+   cd PlaywrightMCP-Jenkins-Allure-framework
    npm install
    ```
 3. **Launch the Playwright MCP Server**
-   ```bash
-   npm run start
-   ```
+   - Visit the [Playwright MCP GitHub Repository](https://github.com/microsoft/playwright-mcp)
+   - Click on the “Install Server” button on the page — this will prompt you to open Visual Studio Code.
+   - In VS Code, follow the prompt and select “Install Server” to complete the setup.
+
 
 ## 💡 Sample Prompts to Try
 
@@ -100,7 +101,7 @@ This project integrates seamlessly with Jenkins to support automated test execut
 
 Here’s a sample view of test execution on Jenkins:
 
-![Jenkins Execution](./assets/jenkins-execution.png)
+![Jenkins Execution](./assets/Jenkins-execution.png)
 
 ---
 
@@ -110,4 +111,4 @@ We use Allure for clean, rich test result reporting.
 
 ### 🧪 Sample Allure Report
 
-![Allure Report](./assets/allure-report.png)
+![Allure Report](./assets/Allure-report.png)
