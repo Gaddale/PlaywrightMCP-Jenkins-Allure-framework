@@ -91,3 +91,23 @@ Use the following prompts inside your GitHub Copilot chat or inline comments for
    - Jenkins will: Clone the repo, Install dependencies, Run Playwright tests, Generate Allure results and Publish the report
 6. View the Allure Report
    - After build finishes, go to the job → Allure Report link will appear in the left menu. View detailed reports with test steps, logs, attachments, and trends.
+
+## 🚀 Jenkins CI/CD Integration
+
+This project integrates seamlessly with Jenkins to support automated test execution and reporting pipelines.
+
+### ✅ Jenkins Job Execution
+
+Here’s a sample view of test execution on Jenkins:
+
+![Jenkins Execution](./assets/jenkins-execution.png)
+
+---
+
+## 📊 Allure Report Integration
+
+We use Allure for clean, rich test result reporting.
+
+### 🧪 Sample Allure Report
+
+![Allure Report](./assets/allure-report.png)
