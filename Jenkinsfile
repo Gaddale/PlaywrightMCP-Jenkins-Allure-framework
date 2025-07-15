@@ -8,14 +8,14 @@ pipeline {
   stages {
     stage('📦 Install Dependencies') {
       steps {
-        bat 'npm install'
-        bat 'npx playwright install'
+        sh 'npm install'
+        sh 'npx playwright install'
       }
     }
 
     stage('🧪 Run Playwright Tests') {
       steps {
-        bat 'npx playwright test --reporter=line,allure-playwright'
+        sh 'npx playwright test --reporter=line,allure-playwright'
       }
     }
   }
